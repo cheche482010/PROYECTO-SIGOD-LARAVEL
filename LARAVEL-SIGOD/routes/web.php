@@ -18,3 +18,5 @@
 Route::resource('Aulas', 'AulasController');
 
 Route::resource('Actividades', 'ActividadesController');
+
+Route::resource('Unidades_Curriculares', 'Unidades_CurricularesController');
