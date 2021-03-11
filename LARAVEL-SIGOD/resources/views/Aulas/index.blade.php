@@ -1,6 +1,12 @@
+@section('title', ' Tabla Aulas ')
+
 @extends('layouts.layout')
+
 @section('content')
-<div class="row">
+
+@extends('layouts.menu1')
+
+<div class="row" style="margin-top: -60px;">
     <div class="col-12">
         <div class="card">
             <div class="card-block">
@@ -19,7 +25,7 @@
                 <br>
                     <div class="table-container">
                         <table class="table table-bordred table-striped color-table info-table" id="mytable">
-                            <thead>
+                            <thead> 
                                 <th>
                                     Numero
                                 </th>
@@ -62,17 +68,17 @@
                                         {{$aula->capacidad}}
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary btn-xs" href="{{action('AulasController@edit', $aula->id)}}">
-                                            <i class="fas fa-edit">
+                                        <a class="btn btn-primary btn-xs" href="{{action('Aulas_Controller@edit', $aula->id)}}">
+                                            <i class="fa fa-edit" style="font-size: 20px;" >
                                             </i>
                                         </a>
                                     </td>
                                     <td>
-                                        <form action="{{action('AulasController@destroy', $aula->id)}}" method="post">
+                                        <form action="{{action('Aulas_Controller@destroy', $aula->id)}}" method="post">
                                             {{csrf_field()}}
                                             <input name="_method" type="hidden" value="DELETE">
                                                 <button class="btn btn-danger btn-xs" type="submit">
-                                                    <i class="fas fa-trash-alt">
+                                                    <i class="fa fa-trash-o"  style="font-size: 20px;">
                                                     </i>
                                                 </button>
                                             </input>
@@ -88,6 +94,7 @@
                                 </tr>
                                 @endif
                             </tbody>
+                            
                         </table>
                         {{ $Aulas->links() }}
                     </div>
@@ -95,5 +102,6 @@
             </div>
         </div>
     </div>
-    @endsection
+    
 </div>
+@endsection

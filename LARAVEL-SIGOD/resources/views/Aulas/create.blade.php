@@ -1,5 +1,10 @@
+@section('title', ' Tabla Aulas ')
+
 @extends('layouts.layout')
+
 @section('content')
+
+@extends('layouts.menu1')
 <div class="row">
         <div class="col-12">
             <div class="card">
@@ -22,7 +27,11 @@
  
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nuevo Aula</h3>
+					<center>
+						<h3 class="panel-title">
+							Nueva Aula
+						</h3>
+					</center>
 				</div>
 				<div class="panel-body">					
 					<div class="table-container">
@@ -34,7 +43,7 @@
 									<div class="form-group">
 										<label for="numero">
                                         Número del Aula
-                                    	</label>
+                                    	</label> 
                                     <input class="form-control input-sm mb-10" id="numero" name="numero" placeholder="Número" type="number"/>
 
 									</div>
@@ -50,7 +59,7 @@
 							</div>
  
 							<div class="row">
-								<div class="col-md-6  m-t-10">
+								<div class="col-md-6  ">
                                     
                                     <div class="form-group">
                                     	<label for="ubicacion">

@@ -11,14 +11,14 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// }); 
+Route::get('/', function () {
+    return view('index'); 
+}); 
 
-Route::resource('Aulas', 'AulasController');
+Route::resource('Aulas', 'Aulas_Controller');
 
-Route::resource('Actividades', 'ActividadesController');
+Route::resource('Actividades', 'Actividades_Controller');
 
-Route::resource('Unidades_Curriculares', 'Unidades_CurricularesController');
+Route::resource('Unidades_Curriculares', 'Unidades_Curriculares_Controller');
 
-Route::resource('Docentes', 'DocentesController');
+Route::resource('Docentes', 'Docentes_Controller');

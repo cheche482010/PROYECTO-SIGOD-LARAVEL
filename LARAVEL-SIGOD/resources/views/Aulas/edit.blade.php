@@ -1,6 +1,10 @@
+@section('title', ' Tabla Aulas ')
 
 @extends('layouts.layout')
+
 @section('content')
+
+@extends('layouts.menu1')
 <div class="row">
         <div class="col-12">
             <div class="card">
@@ -23,12 +27,16 @@
  
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nuevo Aula</h3>
-
+					<center>
+						<h3 class="panel-title">
+							Actualizar Aula
+						</h3>
+					</center>
 				</div>
 				<div class="panel-body">					
 					<div class="table-container">
-						<form method="POST" action=""  role="form">
+						<form method="POST" action="{{ route('Aulas.update', ['id' => $Aulas->id]) }}"  role="form">
+							{{method_field('patch')}}
 							{{ csrf_field() }}
 						
 							<div class="col">
